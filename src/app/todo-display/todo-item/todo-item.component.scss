@@ -1,0 +1,49 @@
+.hideButton {
+  display: none;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.item > div {
+  margin-right: 15px;
+}
+
+.item-description {
+  overflow-wrap: anywhere;
+}
+
+.completed {
+  text-decoration: line-through;
+  font-style: italic;
+  color: grey;
+  opacity: 0.6;
+}
+
+.button-wrapper {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+/*Hide the default checkbox*/
+.hidden-checkbox {
+  display: none;
+}
+
+/*Custom checkbox and other buttons*/
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  padding-right: 5px;
+}
+
+#item-editor {
+  font-family: 'Lucida Console', Monaco, monospace;
+  border-radius: 2px;
+  padding: 0px;
+  border: 3px solid blue;
+}

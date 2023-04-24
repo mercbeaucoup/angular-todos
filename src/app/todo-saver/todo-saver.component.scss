@@ -1,0 +1,28 @@
+input {
+  margin: 10px;
+  font-family: inherit;
+  width: 60%;
+  font-size: 0.8rem;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+}
+
+.form-group {
+  text-align: center;
+  margin: 1rem;
+}
+
+label {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  margin: 1rem;
+}
+
+.btn {
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 10px;
+}

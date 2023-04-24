@@ -1,0 +1,64 @@
+<div class="item">
+  <div>
+    <button
+      (click)="toggleStatus(item)"
+      #uncheckedBox
+      [ngClass]="item.done ? 'hideButton' : 'showButton'"
+    >
+      <img
+        class="icon"
+        src="/assets/icons/checkbox.png"
+        alt="A blank checkbox"
+      />
+    </button>
+    <button
+      (click)="toggleStatus(item)"
+      #checkmark
+      [ngClass]="item.done ? 'showButton' : 'hideButton'"
+    >
+      <img
+        class="icon"
+        src="/assets/icons/checkmark.png"
+        alt="A blue checkmark"
+      />
+    </button>
+  </div>
+  <div class="item-description" *ngIf="!editable">
+    <label
+      for="item.id"
+      [ngClass]="item.done ? 'completed' : 'uncompleted'"
+      *ngIf="!editable"
+    >
+      {{ item.description }}
+    </label>
+    <input
+      id="item.id"
+      type="checkbox"
+      [checked]="item.done"
+      class="hidden-checkbox"
+    />
+  </div>
+  <div class="button-wrapper" *ngIf="!editable">
+    <button class="edit-todo" (click)="editable = !editable">
+      <img
+        class="icon"
+        src="/assets/icons/pencil.png"
+        alt="A pencil with a pink eraser"
+      />
+    </button>
+    <button class="delete-todo" (click)="removeTodo(item)">
+      <img
+        class="icon"
+        src="/assets/icons/remove.png"
+        alt="A red circle with an x in it"
+      />
+    </button>
+  </div>
+  <div *ngIf="editable">
+    <app-todo-editor
+      [description]="item.description"
+      (onSaveNewDescription)="saveNewTodoDescription($event)"
+      (onCancelNewDescription)="closeEditor()"
+    ></app-todo-editor>
+  </div>
+</div>

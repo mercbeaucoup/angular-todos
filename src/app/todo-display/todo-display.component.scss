@@ -1,0 +1,24 @@
+ul {
+  list-style-type: none;
+  margin-left: 20px;
+  padding: 5px;
+}
+
+.list-group {
+  margin: 25px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+  background-color: azure;
+  border-radius: 25px;
+}
+
+.section-header {
+  margin: 25px;
+}
+
+.msg {
+  text-align: center;
+  color: grey;
+  font-size: 0.9rem;
+}

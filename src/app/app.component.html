@@ -1,0 +1,23 @@
+<main class="container">
+  <!-- <nav>
+    <label for="darkmode-toggle" id=darkmode-toggle-label> </label>
+    <input type="checkbox" id="darkmode-toggle-input" />
+    <span class="slider round"></span>
+  </nav>
+-->
+  <h1><strong>todos</strong></h1>
+
+  <div class="row">
+    <div class="col">
+      <app-todo-saver (onTodoAdded)="handleNewTodo($event)"></app-todo-saver>
+    </div>
+    <div class="col">
+      <app-todo-display
+        [itemsToDisplay]="savedTodos"
+        (onTodoRemoved)="handleRemoveTodo($event)"
+        (onTodoUpdated)="handleUpdateTodo($event)"
+      >
+      </app-todo-display>
+    </div>
+  </div>
+</main>

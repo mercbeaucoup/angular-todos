@@ -1,0 +1,31 @@
+.editor-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.editor-wrapper > div {
+  margin-right: 15px;
+}
+
+.button-wrapper {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  padding-right: 5px;
+}
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: azure;
+  font-family: inherit;
+  width: 100%;
+}

@@ -1,0 +1,27 @@
+<div class="editor-wrapper">
+  <div>
+    <label for="item-editor" hidden>Todo Editor</label>
+    <input
+      type="text"
+      aria-label="Edit a single todo item"
+      name="editTodo"
+      [(ngModel)]="pendingValue"
+      id="item-editor"
+      (keyup.enter)="saveNewDescription()"
+      (keyup.esc)="cancelNewDescription()"
+      autofocus
+    />
+  </div>
+  <div class="button-wrapper">
+    <button class="cancel-edit" (click)="cancelNewDescription()">
+      <img class="icon" src="/assets/icons/close.png" alt="Cancel button" />
+    </button>
+    <button class="save-edit" (click)="saveNewDescription()">
+      <img
+        class="icon"
+        src="/assets/icons/floppy-disk.png"
+        alt="Cancel button"
+      />
+    </button>
+  </div>
+</div>

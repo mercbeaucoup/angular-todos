@@ -1,0 +1,21 @@
+<div class="form-group">
+  <label for="todoEntry">What would you like to accomplish?</label><br />
+  <input
+    type="text"
+    class="form-control"
+    id="todoEntry"
+    name="todoEntry"
+    #todoEntry
+    size="40"
+    placeholder="Enter a todo"
+    aria-label="Enter a todo"
+    (keyup.enter)="saveTodo(todoEntry.value); todoEntry.value = ''"
+  />
+  <button
+    class="btn btn-primary float-end"
+    type="submit"
+    (click)="saveTodo(todoEntry.value); todoEntry.value = ''"
+  >
+    Add
+  </button>
+</div>

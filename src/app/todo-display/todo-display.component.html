@@ -1,0 +1,13 @@
+<div class="list-group">
+  <label class="section-header">Next up:</label>
+  <ul>
+    <li *ngFor="let i of itemsToDisplay" id="i.id">
+      <app-todo-item
+        [item]="i"
+        (onRemoveTodo)="todoRemoved($event)"
+        (onUpdateTodo)="todoUpdated($event)"
+      ></app-todo-item>
+    </li>
+  </ul>
+  <p *ngIf="!itemsToDisplay.length" class="msg">Nothing, yet!</p>
+</div>
